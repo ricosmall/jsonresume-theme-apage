@@ -1,6 +1,6 @@
 # jsonresume-theme-apage
 
-This is the a theme for [JSON Resume](http://jsonresume.org/), trying to fit all infomation in a print page.
+This is a theme for [JSON Resume](http://jsonresume.org/), trying to fit all infomation in a print page.
 
 ## Getting started
 
