@@ -1,90 +1,56 @@
 {{#resume.basics}}
-	<h1>{{name}}</h1>
-	<h2>{{label}}</h2>
-	<section id="basics">
-		<div class="contact">
-		{{#if website}}
-		<div class="website">
-			<strong>Website</strong>
-			{{website}}
-		</div>
+<h1 class="text-4xl">
+	<span class="font-bold">{{name}}</span>
+	{{#if label}}
+	<span class='text-xl md:text-2xl text-gray-700 md:ml-2 block pb-2 md:inline md:pb-0 print:text-2xl print:ml-2 print:inline print:pb-0'>{{label}}</span>
+	{{/if}}
+</h1>
+<section id="basics" class="text-gray-700">
+	<div class="basic inline-block">
+		{{#if sex}}
+		<span class='sex'>{{sex}}</span>
+		{{#if age}}
+		<span class='mx-1'>|</span>
+		<span class='age'>{{age}}</span>
 		{{/if}}
-		{{#if email}}
-		<div class="email">
-			<strong>Email</strong>
-			{{email}}
-		</div>
+		{{#if educationLevel}}
+		<span class='mx-1'>|</span>
+		<span class='educationLevel'>{{educationLevel}}</span>
+		{{/if}}
+		{{#if workYears}}
+		<span class='mx-1'>|</span>
+		<span class='workYears'>{{workYears}}</span>
+		{{/if}}
 		{{/if}}
 		{{#if phone}}
-		<div class="phone">
-			<strong>Phone</strong>
-			{{phone}}
-		</div>
+		<span class="mx-1">|</span>
+		<span class='phone'>
+			<a class="hover:text-blue-500 hover:underline border-blue-500" href="tel:{{phone}}">{{phone}}</a>
+		</span>
 		{{/if}}
-		</div>
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
+		{{#if email}}
+		<span class='mx-1'>|</span>
+		<span><a class='hover:text-blue-500 hover:underline border-blue-500' href="mailto:{{email}}">{{email}}</a></span>
 		{{/if}}
 		{{#location}}
-		<h3>Location</h3>
-		<section id="location">
-			{{#if address}}
-			<div class="address">
-				<strong>Address</strong>
-				{{address}}
-			</div>
-			{{/if}}
-			{{#if postalCode}}
-			<div class="postalCode">
-				<strong>Postal code</strong>
-				{{postalCode}}
-			</div>
-			{{/if}}
-			{{#if city}}
-			<div class="city">
-				<strong>City</strong>
-				{{city}}
-			</div>
-			{{/if}}
-			{{#if countryCode}}
-			<div class="countryCode">
-				<strong>Country code</strong>
-				{{countryCode}}
-			</div>
-			{{/if}}
-			{{#if region}}
-			<div class="region">
-				<strong>Region</strong>
-				{{region}}
-			</div>
-			{{/if}}
-		</section>
+		<span class='mx-1'>|</span>
+		<span class='address'>
+			{{#if region}}{{region}}{{/if}}{{#if city}}{{city}}{{/if}}
+		</span>
 		{{/location}}
-		{{#if profiles.length}}
-		<h3>Profiles</h3>
-		<section id="profiles">
-			{{#each profiles}}
-			<div class="item">
-				{{#if network}}
-				<strong class="network">
-					{{network}}
-				</strong>
-				{{/if}}
-				{{#if username}}
-				<div class="username">
-					{{username}}
-				</div>
-				{{/if}}
-				{{#if url}}
-				<div class="url">
-					<a href="{{url}}">Link</a>
-				</div>
-				{{/if}}
-			</div>
-			{{/each}}
-		</section>
+	</div>
+	{{#if profiles.length}}
+	<h3>个人站点</h3>
+	<section id="profiles">
+		{{#each profiles}}
+		{{#if url}}
+		<span class='url'>
+			<a href='{{url}}'>{{network}}</a>
+		</span>
+		{{#unless @last}}<span class='mx-1'>|</span>{{/unless}}
 		{{/if}}
+		{{/each}}
 	</section>
+	{{/if}}
+</section>
 {{/resume.basics}}

@@ -1,19 +1,21 @@
 {{#if resume.references.length}}
-<section id="references">
-	<h2>References</h2>
-	{{#each resume.references}}
-	<div class="item">
-		{{#if reference}}
-		<blockquote class="reference">
-			{{reference}}
-		</blockquote>
-		{{/if}}
-		{{#if name}}
-		<div class="name">
-			— {{name}}
+<section id="references" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+	<h2 class="text-xl font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">推荐</h2>
+	<div class="wrap flex-1">
+		{{#each resume.references}}
+		<div class="{{#unless @first}}mt-2{{/unless}}">
+			{{#if reference}}
+			<blockquote class="reference">
+				{{reference}}
+			</blockquote>
+			{{/if}}
+			{{#if name}}
+			<div class="text-right text-gray-500">
+				— <em>{{name}}</em>
+			</div>
+			{{/if}}
 		</div>
-		{{/if}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}

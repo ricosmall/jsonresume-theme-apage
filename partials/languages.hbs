@@ -1,19 +1,18 @@
 {{#if resume.languages.length}}
-<section id="languages">
-	<h2>Languages</h2>
-	{{#each resume.languages}}
-	<div class="item">
-		{{#if language}}
-		<div class="language">
+<section id="languages" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">语言</h2>
+	<div class="wrap">
+		{{#each resume.languages}}
+		<span class="mr-2">
+			{{#if language}}
 			{{language}}
-		</div>
-		{{/if}}
-		{{#if fluency}}
-		<div class="fluency">
-			<em>{{fluency}}</em>
-		</div>
-		{{/if}}
+			{{/if}}
+			{{#if fluency}}
+			<span class="text-gray-500">{{fluency}}</span>
+			{{/if}}
+		</span>
+		{{#unless @last}}<span class="mx-1">|</span>{{/unless}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}

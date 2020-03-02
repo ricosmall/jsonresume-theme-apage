@@ -1,34 +1,36 @@
 {{#if resume.publications.length}}
-<section id="publications">
-	<h2>Publications</h2>
-	{{#each resume.publications}}
-	<div class="item">
-		{{#if name}}
-		<div class="name">
-			{{name}}
+<section id="publications" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+	<h2 class="text-xl font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">作品</h2>
+	<div class="wrap">
+		{{#each resume.publications}}
+		<div class="{{#unless @first}}mt-2{{/unless}}">
+			{{#if name}}
+			<span class="inline-block w-full md:w-48 print:w-48 font-bold">
+				{{name}}
+			</span>
+			{{/if}}
+			{{#if publisher}}
+			<span class="inline-block w-full md:w-48 print:w-48">
+				{{publisher}}
+			</span>
+			{{/if}}
+			{{#if releaseDate}}
+			<span class="inline-block w-full md:w-40 print:w-40">
+				{{releaseDate}}
+			</span>
+			{{/if}}
+			{{#if website}}
+			<span class="website">
+				<a class="hover:underline hover:text-blue-500" href="{{website}}">链接</a>
+			</span>
+			{{/if}}
+			{{#if summary}}
+			<div class="mt-1">
+				<p>{{summary}}</p>
+			</div>
+			{{/if}}
 		</div>
-		{{/if}}
-		{{#if publisher}}
-		<div class="publisher">
-			{{publisher}}
-		</div>
-		{{/if}}
-		{{#if releaseDate}}
-		<div class="releaseDate">
-			{{releaseDate}}
-		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">Link</a>
-		</div>
-		{{/if}}
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}

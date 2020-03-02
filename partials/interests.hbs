@@ -1,21 +1,23 @@
 {{#if resume.interests.length}}
-<section id="interests">
-	<h2>Interests</h2>
-	{{#each resume.interests}}
-	<div class="item">
-		{{#if name}}
-		<div class="name">
+<section id="interests" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">兴趣</h2>
+	<div class="wrap">
+		{{#each resume.interests}}
+		<span>
+			{{#if name}}
 			{{name}}
-		</div>
-		{{/if}}
-		{{#if keywords.length}}
-		<ul class="keywords">
-			{{#each keywords}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
+			{{/if}}
+			{{#if keywords.length}}
+			<span class="keywords">
+				{{#each keywords}}
+				<em>{{.}}</em>
+				{{#unless @last}}，{{/unless}}
+				{{/each}}
+			</span>
+			{{/if}}
+		</span>
+		{{#unless @last}}<span class="mx-1">|</span>{{/unless}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}

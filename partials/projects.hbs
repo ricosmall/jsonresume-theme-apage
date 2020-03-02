@@ -1,0 +1,45 @@
+{{#if resume.projects.length}}
+<section id="projects" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+  <h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">项目<span class="md:block print:block">经历</span></h2>
+  <div class="wrap">
+    {{#each resume.projects}}
+    <div class="{{#unless @first}}mt-2{{/unless}}">
+      <div class="font-bold">
+        <span class="inline-block w-full md:w-48 print:w-48">
+          {{#if startDate}}
+          {{startDate}}
+          {{/if}}
+          {{#if endDate}}
+          - {{endDate}}
+          {{else}}
+          - 至今
+          {{/if}}
+        </span>
+        {{#if name}}
+        <span class="inline-block w-full md:w-48 print:w-48">
+          {{name}}
+        </span>
+        {{/if}}
+        {{#if summary}}
+        <span class="inline-block">
+          <span>{{summary}}</span>
+        </span>
+        {{/if}}
+      </div>
+      {{#if website}}
+      <div class="mt-1 text-gray-500 hover:underline hover:text-blue-500">
+        <a href="{{website}}">{{website}}</a>
+      </div>
+      {{/if}}
+      {{#if highlights.length}}
+      <ul class="mt-1">
+        {{#each highlights}}
+        <li>- {{.}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</section>
+{{/if}}

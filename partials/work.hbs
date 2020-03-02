@@ -1,52 +1,50 @@
 {{#if resume.work.length}}
-<section id="work">
-	<h2>Work</h2>
-	{{#each resume.work}}
-	<div class="item">
-		{{#if company}}
-		<h3 class="name">
-			{{company}}
-		</h3>
-		{{/if}}
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{startDate}}
-			</span>
+<section id="work" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">工作<span class="md:block print:block">经历</span></h2>
+	<div class="wrap">
+		{{#each resume.work}}
+		<div class="{{#unless @first}}mt-2{{/unless}}">
+			<div class="font-bold">
+				<span class="inline-block w-full md:w-48 print:w-48">
+					{{#if startDate}}
+					{{startDate}}
+					{{/if}}
+					{{#if endDate}}
+					- {{endDate}}
+					{{else}}
+					- 至今
+					{{/if}}
+				</span>
+				{{#if company}}
+				<span class="inline-block w-full md:w-64 print:w-64">
+					{{company}}
+				</span>
+				{{/if}}
+				{{#if position}}
+				<span class="inline-block">
+					{{position}}
+				</span>
+				{{/if}}
+			</div>
+			{{#if summary}}
+			<div class="mt-1 text-gray-500">
+				<span>{{summary}}</span>
+				{{#if website}}
+				<span class="ml-2">
+					<a href="{{website}}">{{website}}</a>
+				</span>
+				{{/if}}
+			</div>
 			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
+			{{#if highlights.length}}
+			<ul class="mt-1">
+				{{#each highlights}}
+				<li>- {{.}}</li>
+				{{/each}}
+			</ul>
 			{{/if}}
 		</div>
-		{{#if position}}
-		<div class="position">
-			{{position}}
-		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">{{website}}</a>
-		</div>
-		{{/if}}
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
-		{{#if highlights.length}}
-		<ul class="highlights">
-			{{#each highlights}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}

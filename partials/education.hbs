@@ -1,52 +1,46 @@
 {{#if resume.education.length}}
-<section id="education">
-	<h2>Education</h2>
-	{{#each resume.education}}
-	<div class="item">
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{startDate}}
-			</span>
+<section id="education" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
+	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">教育</h2>
+	<div class="wrap">
+		{{#each resume.education}}
+		<div class="{{#unless @first}}mt-2{{/unless}}">
+			<div class="font-bold">
+				<span class="inline-block w-full md:w-48 print:w-48">
+					{{#if startDate}}
+					{{startDate}}
+					{{/if}}
+					{{#if endDate}}
+					- {{endDate}}
+					{{else}}
+					- Present
+					{{/if}}
+				</span>
+				{{#if institution}}
+				<span class="inline-block w-full sm:w-40 md:w-48 print:w-48">
+					{{institution}}
+				</span>
+				{{/if}}
+				{{#if area}}
+				<span class="inline-block w-full sm:w-48 md:w-40 print:w-40">
+					{{area}}
+				</span>
+				{{/if}}
+				{{#if studyType}}
+				<span class="inline-block">
+					{{studyType}}
+				</span>
+				{{/if}}
+			</div>
+			{{#if courses.length}}
+			<div class="mt-1">
+				{{#each courses}}
+				<span class="gpa">{{.}}</span>
+				{{#unless @last}}<span class='mx-1'>|</span>{{/unless}}
+				{{/each}}
+			</div>
 			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
-			{{/if}}
 		</div>
-		{{#if institution}}
-		<div class="institution">
-			{{institution}}
-		</div>
-		{{/if}}
-		{{#if area}}
-		<div class="area">
-			{{area}}
-		</div>
-		{{/if}}
-		{{#if studyType}}
-		<div class="studyType">
-			{{studyType}}
-		</div>
-		{{/if}}
-		{{#if gpa}}
-		<div class="gpa">
-			GPA: {{gpa}}
-		</div>
-		{{/if}}
-		{{#if courses.length}}
-		<ul class="courses">
-			{{#each courses}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}
