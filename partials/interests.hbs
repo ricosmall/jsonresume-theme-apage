@@ -1,6 +1,6 @@
 {{#if resume.interests.length}}
 <section id="interests" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
-	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">兴趣</h2>
+	<h2 class="text-lg font-bold w-full pb-2 {{#lang 'zh'}}md:w-16 md:pb-0 print:w-16 print:pb-0{{/lang}}">{{i18n 'interests'}}</h2>
 	<div class="wrap">
 		{{#each resume.interests}}
 		<span>

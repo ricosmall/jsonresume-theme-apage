@@ -21,9 +21,9 @@
 		<span class='mx-1'>|</span>
 		<span class='workYears'>{{workYears}}</span>
 		{{/if}}
+		<span class="mx-1">|</span>
 		{{/if}}
 		{{#if phone}}
-		<span class="mx-1">|</span>
 		<span class='phone'>
 			<a class="hover:text-blue-500 hover:underline border-blue-500" href="tel:{{phone}}">{{phone}}</a>
 		</span>
@@ -40,11 +40,10 @@
 		{{/location}}
 	</div>
 	{{#if profiles.length}}
-	<h3>个人站点</h3>
 	<section id="profiles">
 		{{#each profiles}}
 		{{#if url}}
-		<span class='url'>
+		<span class='hover:text-blue-500 hover:underline'>
 			<a href='{{url}}'>{{network}}</a>
 		</span>
 		{{#unless @last}}<span class='mx-1'>|</span>{{/unless}}

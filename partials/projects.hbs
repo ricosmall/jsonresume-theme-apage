@@ -1,6 +1,6 @@
 {{#if resume.projects.length}}
 <section id="projects" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
-  <h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">项目<span class="md:block print:block">经历</span></h2>
+  <h2 class="text-lg font-bold w-full pb-2 {{#lang 'zh'}}md:w-16 md:pb-0 print:w-16 print:pb-0{{/lang}}"><span>{{i18n 'projects'}}</span><span class="md:block print:block">{{i18n 'projectsSub'}}</span></h2>
   <div class="wrap">
     {{#each resume.projects}}
     <div class="{{#unless @first}}mt-2{{/unless}}">
@@ -12,7 +12,7 @@
           {{#if endDate}}
           - {{endDate}}
           {{else}}
-          - 至今
+          - {{i18n 'present'}}
           {{/if}}
         </span>
         {{#if name}}

@@ -1,7 +1,7 @@
 {{#if resume.awards.length}}
 <section id="awards" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
-	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">曾获<span
-			class="md:block print:block">奖项</span></h2>
+	<h2 class="text-lg font-bold w-full pb-2 {{#lang 'zh'}}md:w-16 md:pb-0 print:w-16 print:pb-0{{/lang}}">{{i18n 'awards'}}<span
+			class="md:block print:block">{{i18n 'awardsSub'}}</span></h2>
 	<div class="wrap">
 		{{#each resume.awards}}
 		<div class="{{#unless @first}}mt-2{{/unless}}">

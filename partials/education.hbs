@@ -1,6 +1,6 @@
 {{#if resume.education.length}}
 <section id="education" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
-	<h2 class="text-lg font-bold w-full pb-2 md:w-16 md:pb-0 print:w-16 print:pb-0">教育</h2>
+	<h2 class="text-lg font-bold w-full pb-2 {{#lang 'zh'}}md:w-16 md:pb-0 print:w-16 print:pb-0{{/lang}}">{{i18n 'education'}}</h2>
 	<div class="wrap">
 		{{#each resume.education}}
 		<div class="{{#unless @first}}mt-2{{/unless}}">
@@ -16,12 +16,12 @@
 					{{/if}}
 				</span>
 				{{#if institution}}
-				<span class="inline-block w-full sm:w-40 md:w-48 print:w-48">
+				<span class="inline-block w-full md:w-48 print:w-48">
 					{{institution}}
 				</span>
 				{{/if}}
 				{{#if area}}
-				<span class="inline-block w-full sm:w-48 md:w-40 print:w-40">
+				<span class="inline-block w-full md:w-40 print:w-40">
 					{{area}}
 				</span>
 				{{/if}}
@@ -34,7 +34,7 @@
 			{{#if courses.length}}
 			<div class="mt-1">
 				{{#each courses}}
-				<span class="gpa">{{.}}</span>
+				<span class="text-gray-500">{{.}}</span>
 				{{#unless @last}}<span class='mx-1'>|</span>{{/unless}}
 				{{/each}}
 			</div>
