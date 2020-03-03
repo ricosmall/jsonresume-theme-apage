@@ -52,7 +52,7 @@ LANG=en resume export resume.pdf
 
 ## Example
 
-[Json Resume Theme Example](https://ricosmall.github.io/jsonresume-theme-apage/)
+[jsonresume-theme-apage](https://ricosmall.github.io/jsonresume-theme-apage/)
 
 ## License
 
