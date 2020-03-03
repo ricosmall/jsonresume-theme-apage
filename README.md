@@ -1,6 +1,6 @@
 # jsonresume-theme-apage
 
-This is a theme for [JSON Resume](http://jsonresume.org/), trying to fit all infomation in a print page.
+This is a theme for [JSON Resume](http://jsonresume.org/), it's responsive for multi screens, also trying to fit all infomation in a print page.
 
 ## Getting started
 
@@ -33,6 +33,22 @@ This is a theme for [JSON Resume](http://jsonresume.org/), trying to fit all inf
    ```sh
    resume serve
    ```
+
+## Special Features
+
+### Language Support
+
+Current support chinese and english. By default, use `process.env.LANG` to get your locale. For example, if your computer language is chinese, will automatically set language to chinese when rendering.
+
+You can also manually define it when using command `resume`, for example, if you want english support, just run like below:
+
+```sh
+# serve
+LANG=en resume serve
+
+# export
+LANG=en resume export resume.pdf
+```
 
 ## Example
 
