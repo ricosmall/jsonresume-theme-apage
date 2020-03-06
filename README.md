@@ -50,6 +50,40 @@ LANG=en resume serve
 LANG=en resume export resume.pdf
 ```
 
+### Special Chinese Support
+
+1. You can add extra fileds in `basics`
+
+   ```json
+   {
+      "basics": {
+         ...,
+         "sex": "男",
+         "age": "24",
+         "workYears": "4年经验",
+         "educationLevel": "本科"
+         ...,
+      }
+   }
+   ```
+
+   And those fields will display at the top of resume page, see [the demo](https://ricosmall.github.io/jsonresume-theme-apage/chinese.html).
+
+2. You can also add extra filed `summary` in json file
+
+   ```json
+   {
+      "basics": {},
+      ...,
+      "summary": [
+         "热爱编程，关注技术",
+         "喜欢挑战，挑战自己，挑战不可能"
+      ]
+   }
+   ```
+
+   And the field will display at the bottom of resume page, see [the demo](https://ricosmall.github.io/jsonresume-theme-apage/chinese.html)
+
 ## Example
 
 [jsonresume-theme-apage](https://ricosmall.github.io/jsonresume-theme-apage/)
