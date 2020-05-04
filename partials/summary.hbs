@@ -1,9 +1,10 @@
 {{#if resume.summary.length}}
 <section id="summary" class="flex flex-wrap border-t border-dashed border-gray-500 mt-2 pt-2">
-  <h2 class="text-lg font-bold w-full pb-2 {{#lang 'zh'}}md:w-16 md:pb-0 print:w-16 print:pb-0{{/lang}}"><span>{{i18n 'summary'}}</span><span class="md:block print:block">{{i18n 'summarySub'}}</span></h2>
+  <h2 class="text-lg font-bold w-full pb-2 {{#lang 'zh'}}md:w-16 md:pb-0 print:w-16 print:pb-0{{/lang}}">
+    <span>{{i18n 'summary'}}</span><span class="md:block print:block">{{i18n 'summarySub'}}</span></h2>
   <ul class="highlights">
     {{#each resume.summary}}
-    <li>{{.}}</li>
+    <li><span>> </span>{{.}}</li>
     {{/each}}
   </ul>
 </section>
