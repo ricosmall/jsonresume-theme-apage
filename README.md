@@ -48,6 +48,9 @@ LANG=en resume serve
 
 # export
 LANG=en resume export resume.pdf
+
+# for those node with the Lang of en, you can use the following to render chinese resume
+LANG=zh resume serve
 ```
 
 ### Special Chinese Support
@@ -91,3 +94,4 @@ LANG=en resume export resume.pdf
 ## License
 
 Available under [the MIT license](http://mths.be/mit).
+
