@@ -60,12 +60,10 @@ LANG=zh resume serve
    ```json
    {
       "basics": {
-         ...,
          "sex": "男",
          "age": "24",
          "workYears": "4年经验",
          "educationLevel": "本科"
-         ...,
       }
    }
    ```
@@ -77,7 +75,6 @@ LANG=zh resume serve
    ```json
    {
       "basics": {},
-      ...,
       "summary": [
          "热爱编程，关注技术",
          "喜欢挑战，挑战自己，挑战不可能"
