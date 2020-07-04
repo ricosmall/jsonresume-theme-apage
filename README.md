@@ -62,7 +62,7 @@ LANG=zh resume serve
       "basics": {
          "sex": "男",
          "age": "24",
-         "workYears": "4年经验",
+         "workYears": "3年经验",
          "educationLevel": "本科"
       }
    }
