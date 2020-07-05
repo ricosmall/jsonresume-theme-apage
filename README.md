@@ -63,7 +63,8 @@ LANG=zh resume serve
          "sex": "男",
          "age": "24",
          "workYears": "3年经验",
-         "educationLevel": "本科"
+         "educationLevel": "本科",
+         "avatar": "https://avatar.com/yourname.jpg"
       }
    }
    ```
