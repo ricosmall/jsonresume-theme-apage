@@ -1,55 +1,67 @@
 {{#resume.basics}}
-<h1 class="text-4xl">
-	<span class="font-bold">{{name}}</span>
-	{{#if label}}
-	<span class='text-xl md:text-2xl text-gray-700 md:ml-2 block pb-2 md:inline md:pb-0 print:text-2xl print:ml-2 print:inline print:pb-0'>{{label}}</span>
-	{{/if}}
-</h1>
-<section id="basics" class="text-gray-700">
-	<div class="basic inline-block">
-		{{#if sex}}
-		<span class='sex'>{{sex}}</span>
-		{{#if age}}
-		<span class='mx-1'>|</span>
-		<span class='age'>{{age}}</span>
-		{{/if}}
-		{{#if educationLevel}}
-		<span class='mx-1'>|</span>
-		<span class='educationLevel'>{{educationLevel}}</span>
-		{{/if}}
-		{{#if workYears}}
-		<span class='mx-1'>|</span>
-		<span class='workYears'>{{workYears}}</span>
-		{{/if}}
-		<span class="mx-1">|</span>
-		{{/if}}
-		{{#if phone}}
-		<span class='phone'>
-			<a class="hover:text-blue-500 hover:underline border-blue-500" href="tel:{{phone}}">{{phone}}</a>
-		</span>
-		{{/if}}
-		{{#if email}}
-		<span class='mx-1'>|</span>
-		<span><a class='hover:text-blue-500 hover:underline border-blue-500' href="mailto:{{email}}">{{email}}</a></span>
-		{{/if}}
-		{{#location}}
-		<span class='mx-1'>|</span>
-		<span class='address'>
-			{{#if region}}{{region}}{{/if}}{{#if city}}{{city}}{{/if}}
-		</span>
-		{{/location}}
+<div class="flex flex-wrap items-end">
+	{{#if avatar}}
+	<div class="basics-avatar w-full text-center md:w-16 md:h-16 md:mr-2 print:w-16 print:h-16 print:mr-2">
+		<img class="w-full h-24 md:h-full print:h-full object-center object-contain" src="{{avatar}}" alt="{{name}}">
 	</div>
-	{{#if profiles.length}}
-	<section id="profiles">
-		{{#each profiles}}
-		{{#if url}}
-		<span class='hover:text-blue-500 hover:underline'>
-			<a href='{{url}}'>{{network}}</a>
-		</span>
-		{{#unless @last}}<span class='mx-1'>|</span>{{/unless}}
-		{{/if}}
-		{{/each}}
-	</section>
 	{{/if}}
-</section>
+	<div class="basics-content flex-1">
+		<h1 class="text-4xl text-center md:text-left print:text-left">
+			<span class="font-bold">{{name}}</span>
+			{{#if label}}
+			<span
+				class='text-xl md:text-2xl text-gray-700 md:ml-2 block pb-2 md:inline md:pb-0 print:text-2xl print:ml-2 print:inline print:pb-0'>{{label}}</span>
+			{{/if}}
+		</h1>
+		<section id="basics" class="text-gray-700">
+			<div class="basic inline-block">
+				{{#if sex}}
+				<span class='sex'>{{sex}}</span>
+				{{#if age}}
+				<span class='mx-1'>|</span>
+				<span class='age'>{{age}}</span>
+				{{/if}}
+				{{#if educationLevel}}
+				<span class='mx-1'>|</span>
+				<span class='educationLevel'>{{educationLevel}}</span>
+				{{/if}}
+				{{#if workYears}}
+				<span class='mx-1'>|</span>
+				<span class='workYears'>{{workYears}}</span>
+				{{/if}}
+				<span class="mx-1">|</span>
+				{{/if}}
+				{{#if phone}}
+				<span class='phone'>
+					<a class="hover:text-blue-500 hover:underline border-blue-500" href="tel:{{phone}}">{{phone}}</a>
+				</span>
+				{{/if}}
+				{{#if email}}
+				<span class='mx-1'>|</span>
+				<span><a class='hover:text-blue-500 hover:underline border-blue-500'
+						href="mailto:{{email}}">{{email}}</a></span>
+				{{/if}}
+				{{#location}}
+				<span class='mx-1'>|</span>
+				<span class='address'>
+					{{#if region}}{{region}}{{/if}}{{#if city}}{{city}}{{/if}}
+				</span>
+				{{/location}}
+			</div>
+			{{#if profiles.length}}
+			<section id="profiles">
+				{{#each profiles}}
+				{{#if url}}
+				<span class='hover:text-blue-500 hover:underline'>
+					<a href='{{url}}'>{{network}}</a>
+				</span>
+				{{#unless @last}}<span class='mx-1'>|</span>{{/unless}}
+				{{/if}}
+				{{/each}}
+			</section>
+			{{/if}}
+		</section>
+	</div>
+</div>
+
 {{/resume.basics}}
