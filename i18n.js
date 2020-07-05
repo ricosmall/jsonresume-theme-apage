@@ -27,6 +27,7 @@ var i18n = {
     volunteer: '志愿',
     volunteerSub: '经历',
     education: '教育',
+    educationSub: '经历',
     awards: '曾获',
     awardsSub: '奖项',
     publications: '作品',
