@@ -1,6 +1,8 @@
 var fs = require("fs");
 var path = require('path');
 var Handlebars = require("handlebars");
+const H = require('just-handlebars-helpers');
+
 var i18n = require('./i18n.js');
 var lang = process.env.LANG.slice(0, 2) || 'zh';
 
@@ -13,6 +15,9 @@ Handlebars.registerHelper('lang', function (language, options) {
 		return options.fn(this)
 	}
 })
+
+// Register just-handlebars-helpers with handlebars
+H.registerHelpers(Handlebars);
 
 function render(resume) {
 	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");

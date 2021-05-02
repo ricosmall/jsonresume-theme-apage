@@ -41,12 +41,12 @@
 				<span><a class='hover:text-blue-500 hover:underline border-blue-500'
 						href="mailto:{{email}}">{{email}}</a></span>
 				{{/if}}
-				{{#location}}
+				{{#if location}}
 				<span class='mx-1'>|</span>
 				<span class='address'>
-					{{#if region}}{{region}}{{/if}}{{#if city}}{{city}}{{/if}}
+					{{#if location.address}}{{location.address}}{{/if}}
 				</span>
-				{{/location}}
+				{{/if}}
 			</div>
 			{{#if profiles.length}}
 			<section id="profiles">
