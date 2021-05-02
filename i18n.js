@@ -40,8 +40,8 @@ var i18n = {
     present: '至今',
     link: '链接'
   },
-    fr: {
-    work: 'Expérience',
+  fr: {
+    work: 'Expériences',
     workSub: '',
     projects: 'Projets',
     projectsSub: '',
@@ -57,10 +57,10 @@ var i18n = {
     references: 'Références',
     summary: 'A propos',
     summarySub: '',
-    present: 'Present',
+    present: 'Aujourd\'hui',
     link: 'Lien'
   },
-    es: {
+  es: {
     work: 'Experiencia profesional',
     workSub: '',
     projects: 'Proyectos',
@@ -77,7 +77,7 @@ var i18n = {
     references: 'Referencias',
     summary: 'En breve',
     summarySub: '',
-    present: 'Actual',
+    present: 'Hoy',
     link: 'Enlace'
   },
 }
