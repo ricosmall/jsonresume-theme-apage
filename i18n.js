@@ -39,7 +39,47 @@ var i18n = {
     summarySub: '评价',
     present: '至今',
     link: '链接'
-  }
+  },
+  fr: {
+    work: 'Expériences',
+    workSub: '',
+    projects: 'Projets',
+    projectsSub: '',
+    volunteer: 'Expériences de bénévolat',
+    volunteerSub: '',
+    education: 'Formation',
+    awards: 'Récompences',
+    awardsSub: '',
+    publications: 'Publications',
+    skills: 'Compétences',
+    languages: 'Langues',
+    interests: 'Interêts',
+    references: 'Références',
+    summary: 'A propos',
+    summarySub: '',
+    present: 'Aujourd\'hui',
+    link: 'Lien'
+  },
+  es: {
+    work: 'Experiencia profesional',
+    workSub: '',
+    projects: 'Proyectos',
+    projectsSub: '',
+    volunteer: 'Voluntariado',
+    volunteerSub: '',
+    education: 'Educación',
+    awards: 'Recompensas',
+    awardsSub: '',
+    publications: 'Publicaciones',
+    skills: 'Habilidades',
+    languages: 'Idiomas',
+    interests: 'Centros de interés',
+    references: 'Referencias',
+    summary: 'En breve',
+    summarySub: '',
+    present: 'Hoy',
+    link: 'Enlace'
+  },
 }
 
 module.exports = i18n

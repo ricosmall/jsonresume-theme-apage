@@ -38,7 +38,7 @@ This is a theme for [JSON Resume](http://jsonresume.org/), it's responsive for m
 
 ### Language Support
 
-Current support chinese and english. By default, use `process.env.LANG` to get your locale. For example, if your computer language is chinese, will automatically set language to chinese when rendering.
+Current support chinese, english, french and spanish. By default, use `process.env.LANG` to get your locale. For example, if your computer language is chinese, will automatically set language to chinese when rendering.
 
 You can also manually define it when using command `resume`, for example, if you want english support, just run like below:
 
