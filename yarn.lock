@@ -2,75 +2,44 @@
 # yarn lockfile v1
 
 
-"commander@~2.20.3":
-  "integrity" "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ=="
-  "resolved" "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
-  "version" "2.20.3"
+commander@~2.20.3:
+  version "2.20.3"
+  resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
 
-"currencyformatter.js@>= 1.0.4 < 2":
-  "integrity" "sha1-+MbZRdzmtn70j0dRaGEajZXJx14="
-  "resolved" "https://registry.npmjs.org/currencyformatter.js/-/currencyformatter.js-1.0.5.tgz"
-  "version" "1.0.5"
-
-"handlebars@^4.3.0", "handlebars@>= 3.*":
-  "integrity" "sha512-7XlnO8yBXOdi7AzowjZssQr47Ctidqm7GbgARapOaqSN9HQhlClnOkR9HieGauIT3A8MBC6u9wPCXs97PCYpWg=="
-  "resolved" "https://registry.npmjs.org/handlebars/-/handlebars-4.3.0.tgz"
-  "version" "4.3.0"
+handlebars@^4.3.0:
+  version "4.7.7"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
   dependencies:
-    "neo-async" "^2.6.0"
-    "optimist" "^0.6.1"
-    "source-map" "^0.6.1"
-    "uglify-js" "^3.1.4"
+    minimist "^1.2.5"
+    neo-async "^2.6.0"
+    source-map "^0.6.1"
+    wordwrap "^1.0.0"
   optionalDependencies:
-    "uglify-js" "^3.1.4"
+    uglify-js "^3.1.4"
 
-"just-handlebars-helpers@^1.0.18":
-  "integrity" "sha512-7L8ERT6TFeyNBCa7T9IzOdyHwYHSJJrRWuTAQi2fNFRzVjqIoqq80aFVvm/1BAtfIRR6Fqp1isI1RwZug0hTBA=="
-  "resolved" "https://registry.npmjs.org/just-handlebars-helpers/-/just-handlebars-helpers-1.0.18.tgz"
-  "version" "1.0.18"
+just-handlebars-helpers@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.npmjs.org/just-handlebars-helpers/-/just-handlebars-helpers-1.0.18.tgz"
 
-"minimist@~0.0.1":
-  "integrity" "sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8="
-  "resolved" "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz"
-  "version" "0.0.10"
+minimist@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
 
-"moment@>= 2.22.0 < 3":
-  "integrity" "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ=="
-  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz"
-  "version" "2.29.1"
+neo-async@^2.6.0:
+  version "2.6.1"
+  resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz"
 
-"neo-async@^2.6.0":
-  "integrity" "sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw=="
-  "resolved" "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz"
-  "version" "2.6.1"
+source-map@^0.6.1, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
 
-"optimist@^0.6.1":
-  "integrity" "sha1-2j6nRob6IaGaERwybpDrFaAZZoY="
-  "resolved" "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz"
-  "version" "0.6.1"
+uglify-js@^3.1.4:
+  version "3.8.0"
+  resolved "https://registry.npmjs.org/uglify-js/-/uglify-js-3.8.0.tgz"
   dependencies:
-    "minimist" "~0.0.1"
-    "wordwrap" "~0.0.2"
+    commander "~2.20.3"
+    source-map "~0.6.1"
 
-"source-map@^0.6.1", "source-map@~0.6.1":
-  "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
-  "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
-  "version" "0.6.1"
-
-"sprintf-js@>= 1.1.1 < 2":
-  "integrity" "sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug=="
-  "resolved" "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz"
-  "version" "1.1.2"
-
-"uglify-js@^3.1.4":
-  "integrity" "sha512-ugNSTT8ierCsDHso2jkBHXYrU8Y5/fY2ZUprfrJUiD7YpuFvV4jODLFmb3h4btQjqr5Nh4TX4XtgDfCU1WdioQ=="
-  "resolved" "https://registry.npmjs.org/uglify-js/-/uglify-js-3.8.0.tgz"
-  "version" "3.8.0"
-  dependencies:
-    "commander" "~2.20.3"
-    "source-map" "~0.6.1"
-
-"wordwrap@~0.0.2":
-  "integrity" "sha1-o9XabNXAvAAI03I0u68b7WMFkQc= sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw=="
-  "resolved" "https://registry.npm.taobao.org/wordwrap/download/wordwrap-0.0.3.tgz"
-  "version" "0.0.3"
+wordwrap@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
